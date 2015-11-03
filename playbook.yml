@@ -1,0 +1,9 @@
+---
+- hosts: all
+  remote_user: root
+  sudo: yes
+  roles:
+    - common
+    - { role: ANXS.timezone, timezone_zone: Europe/Berlin }
+    - { role: franklinkim.docker }
+    - { role: franklinkim.users-oh-my-zsh }
